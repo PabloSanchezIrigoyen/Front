@@ -1,0 +1,100 @@
+.v-container .image-container {
+  border: 8px solid rgb(232 232 232 / 93%);
+}
+
+.v-container > div {
+  flex: 1;
+}
+
+.v-right {
+  gap: 0.5rem;
+}
+
+* Lado derecho y textos */
+.v-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #f5f5dc; /* Beige claro */
+}
+
+/* Acordeón general */
+.accordion {
+  margin-top: 2rem;
+  border: none;
+  width: 100%;
+}
+
+/* Item del acordeón */
+.accordionItem {
+  background: #4e3620; /* Marrón oscuro */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+  color: #f5f5dc;
+}
+
+.accordionItem.expanded {
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+  transform: scale(1.01);
+}
+
+/* Botón del acordeón */
+.accordionButton {
+  background: #4e3620; /* Marrón oscuro */
+  padding: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  color: #f5f5dc;
+}
+
+/* Icono en botón */
+.icon {
+  padding: 0.5rem;
+  background: #cfe0b0; /* Verde oliva claro para contraste */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  fill: #2e3b1f; /* Verde muy oscuro */
+}
+
+/* Texto principal en botón */
+.accordionButton .primaryText {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #f5f5dc;
+}
+
+/* Panel del acordeón */
+.accordionItemPanel {
+  padding: 1rem 1.5rem;
+  font-size: 0.95rem;
+  color: #e6e6d2;
+  background: #3a2a1c; /* Marrón más oscuro para el panel */
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .v-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordionButton .primaryText {
+    font-size: 0.9rem;
+  }
+
+  .accordionItemPanel {
+    font-size: 0.85rem;
+  }
+}

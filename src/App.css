@@ -1,0 +1,20 @@
+.App {
+  position: relative;
+  overflow-x: clip;
+  background-color: #fefefb; /* Beige muy claro de fondo general */
+}
+
+.App > :nth-child(1) {
+  background: var(--olive-dark); /* Verde muy oscuro */
+  position: relative;
+}
+
+/* Difuminado suave para darle luz */
+.white-gradient {
+  position: absolute;
+  width: 20rem;
+  height: 20rem;
+  background: rgba(255, 255, 255, 0.35); /* luz más tenue */
+  filter: blur(100px);
+  border-radius: 100px;
+}

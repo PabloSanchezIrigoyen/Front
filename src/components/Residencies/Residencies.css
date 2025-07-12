@@ -1,0 +1,137 @@
+.r-container {
+  position: relative;
+  overflow: visible; /* Para que las flechas se vean */
+}
+
+/* --- Tarjeta individual --- */
+.r-card {
+  gap: 0.6rem;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: max-content;
+  margin: auto;
+  transition: all 300ms ease-in;
+  background-color: #3a2a1c; /* marrón oscuro de fondo */
+  color: #f5f5dc; /* texto beige claro */
+}
+
+.r-card > img {
+  width: 100%;
+  max-width: 15rem;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.r-card:hover > img {
+  transform: scale(1.03);
+}
+
+.r-card > :nth-child(2) {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #cfe0b0; /* verde oliva claro para título */
+  transition: color 300ms ease;
+}
+
+.r-card > :nth-child(3) {
+  font-size: 1.5rem;
+  color: #f5f5dc;
+  transition: color 300ms ease;
+}
+
+.r-card > :nth-child(4) {
+  font-size: 0.7rem;
+  width: 15rem;
+  color: #ddd9c3; /* beige suave para descripción */
+  transition: color 300ms ease;
+}
+
+/* Hover tarjeta */
+.r-card:hover {
+  scale: 1.025;
+  cursor: pointer;
+  background: linear-gradient(
+    180deg,
+    rgba(207, 224, 176, 0) 0%,
+    rgba(207, 224, 176, 0.46) 217.91%
+  );
+  box-shadow: 0px 72px 49px -51px rgba(207, 224, 176, 0.4);
+  color: #2e3b1f; /* verde oscuro para todo el texto en hover */
+}
+
+.r-card:hover > :nth-child(2),
+.r-card:hover > :nth-child(3),
+.r-card:hover > :nth-child(4) {
+  color: #2e3b1f;
+}
+
+/* --- Botones del slider --- */
+.r-buttons {
+  position: absolute;
+  gap: 1rem;
+  top: 0rem;
+  right: 0;
+  z-index: 1;
+}
+
+.r-buttons button {
+  font-size: 1.2rem;
+  padding: 0.2rem 0.8rem;
+  color: #556B2F; /* verde oliva oscuro */
+  border: none;
+  border-radius: 5px;
+  background-color: #cfe0b0; /* verde oliva claro */
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.r-buttons button:hover {
+  background-color: #2E3B1F; /* verde muy oscuro */
+  color: #F5F5DC; /* beige claro */
+}
+
+.r-buttons > :nth-child(1),
+.r-buttons > :nth-child(2) {
+  box-shadow: 0px 0px 5px 1px rgba(46, 59, 31, 0.5); /* sombra verde oscuro */
+}
+
+/* --- Link envolviendo tarjeta --- */
+.r-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+  .r-head {
+    align-items: center;
+  }
+
+  .r-buttons {
+    position: initial;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .r-card {
+    max-width: 90%;
+    padding: 0.8rem;
+  }
+
+  .r-card > :nth-child(2) {
+    font-size: 1.4rem;
+  }
+
+  .r-card > :nth-child(3) {
+    font-size: 1.1rem;
+  }
+
+  .r-card > :nth-child(4) {
+    font-size: 0.65rem;
+    width: auto;
+  }
+}

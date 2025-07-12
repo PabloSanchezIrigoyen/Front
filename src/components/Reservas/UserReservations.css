@@ -1,0 +1,164 @@
+.reservations-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(86, 119, 77, 0.15);
+}
+
+.reservations-container h2 {
+  color: #557A46;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+  text-shadow: 1px 1px 3px rgba(85, 122, 70, 0.3);
+}
+
+.no-reservations {
+  text-align: center;
+  font-style: italic;
+  color: #777;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.no-reservations a {
+  color: #557A46;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.no-reservations a:hover {
+  color: #405823;
+  text-decoration: underline;
+}
+
+.reservations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+.reservation-card {
+  display: flex;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 12px 28px rgba(86, 119, 77, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: default;
+}
+
+.reservation-card:hover {
+  box-shadow: 0 18px 40px rgba(86, 119, 77, 0.2);
+  transform: translateY(-5px);
+}
+
+.cabin-photo {
+  width: 180px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  transition: transform 0.4s ease;
+}
+
+.reservation-card:hover .cabin-photo {
+  transform: scale(1.05);
+}
+
+.reservation-info {
+  padding: 1.2rem 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reservation-info h3 {
+  margin-top: 0;
+  color: #405823;
+  margin-bottom: 0.7rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.reservation-info p {
+  margin: 0.3rem 0;
+  color: #555;
+  font-size: 1.05rem;
+}
+
+.reservation-info .description {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+/* Input para noches */
+.reservation-info input[type="number"] {
+  width: 70px;
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #9dbb85;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+  color: #405823;
+  text-align: center;
+}
+
+.reservation-info input[type="number"]:focus {
+  outline: none;
+  border-color: #557a46;
+  box-shadow: 0 0 8px rgba(85, 122, 70, 0.5);
+}
+
+/* Botón eliminar */
+.reservation-info button {
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.4rem;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-start;
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.reservation-info button:hover {
+  background-color: #c0392b;
+  box-shadow: 0 7px 20px rgba(192, 57, 43, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .reservation-card {
+    flex-direction: column;
+  }
+  .cabin-photo {
+    width: 100%;
+    height: 220px;
+    border-radius: 15px 15px 0 0;
+  }
+  .reservation-info {
+    padding: 1rem 1.2rem;
+  }
+  .reservation-info button {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,33 @@
+.inner-container {
+  gap: 1.5rem;
+  background: #1e2a47; /* azul oscuro */
+  padding: 2rem;
+  border: 6px solid #2f3e5c; /* borde más claro */
+  border-radius: 10px;
+  text-align: center;
+}
+
+.inner-container .primaryText {
+  color: #f5f5dc; /* beige claro para buena legibilidad */
+  font-weight: 600;
+}
+
+.inner-container .secondaryText {
+  color: rgba(245, 245, 220, 0.7); /* beige claro transparente */
+}
+
+.inner-container .button {
+  background: #ffc107; /* ámbar suave */
+  border: none;
+  color: #1e2a47;
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.inner-container .button:hover {
+  background: #e0a800; /* ámbar más intenso */
+  color: white;
+  cursor: pointer;
+}

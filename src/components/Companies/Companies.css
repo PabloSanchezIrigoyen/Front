@@ -1,0 +1,11 @@
+.c-container {
+  justify-content: space-around;
+  gap: 13rem;
+}
+
+.c-container > img {
+  width: 9rem;
+  height: 9rem;        /* fija la altura para igualar */
+  object-fit: contain; /* mantiene proporción sin recortar */
+  display: block;      /* elimina espacios extra */
+}

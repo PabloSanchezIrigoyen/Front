@@ -1,0 +1,46 @@
+.catalog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+
+.cabin-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.cabin-card:hover {
+  transform: scale(1.02);
+}
+
+.cabin-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.cabin-info {
+  padding: 1rem;
+}
+
+.cabin-info h3 {
+  margin: 0 0 0.5rem;
+  color: #2c3e50;
+}
+
+.cabin-info p {
+  margin: 0 0 0.5rem;
+  color: #555;
+}
+
+.price {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #16a085;
+}
